@@ -1,6 +1,7 @@
 #from character import Character
 from settings import Settings
 from ship import Ship
+from bullet import Bullet
 import sys
 
 import pygame
@@ -13,6 +14,7 @@ class AlienInvasion:
         pygame.init()
         self.clock = pygame.time.Clock()        # Have the game run at the same framerate across all systems.
         self.settings = Settings()
+        self.bullets = pygame.sprite.Group()
 
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
